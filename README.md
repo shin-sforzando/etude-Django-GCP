@@ -1,8 +1,8 @@
-# broad-boilerplate
+# etude-Django-GCP
 
 <!-- Badges -->
-[![CI](https://github.com/shin-sforzando/broad-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/shin-sforzando/broad-boilerplate/actions/workflows/broad-boilerplate.yml)
-[![Bump Version](https://github.com/shin-sforzando/broad-boilerplate/actions/workflows/bump-version.yml/badge.svg)](https://github.com/shin-sforzando/broad-boilerplate/actions/workflows/bump-version.yml)
+[![CI](https://github.com/shin-sforzando/etude-Django-GCP/actions/workflows/ci.yml/badge.svg)](https://github.com/shin-sforzando/etude-Django-GCP/actions/workflows/ci.yml)
+[![Bump Version](https://github.com/shin-sforzando/etude-Django-GCP/actions/workflows/bump-version.yml/badge.svg)](https://github.com/shin-sforzando/etude-Django-GCP/actions/workflows/bump-version.yml)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -12,7 +12,7 @@
 |Screenshot 1|Screenshot 2|
 
 <!-- Synopsis -->
-**broad-boilerplate** is GitHub Template Repository for General Use.
+**etude-Django-GCP** is Sample Repository for Mr. Yokoyama.
 
 <!-- TOC -->
 - [Prerequisites](#prerequisites)
@@ -31,11 +31,9 @@
 
 ## Prerequisites
 
-- A (Version x.y.z or higher)
-  - B
-  - C
-- D
-  - E
+- Docker (Version 20.10.8 or higher)
+  - Python 3.9
+    - Django 4.0
 
 ## How to
 
