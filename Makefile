@@ -8,7 +8,7 @@ CMD_DOCKER_COMPOSE := docker-compose
 
 MAIN_CONTAINER_APP := app
 MAIN_CONTAINER_SHELL := bash
-PREVIEW_URL := http://0.0.0.0:3000/
+PREVIEW_URL := http://0.0.0.0:8000/
 
 .PHONY: ps up setup restart renew shell logs follow open hide reveal build start lint test doc generate deploy stop down clean prune help
 
