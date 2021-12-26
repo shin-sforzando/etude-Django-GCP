@@ -4,7 +4,7 @@ TIMESTAMP := $(shell date +%Y%m%d%H%M%S)
 MAKEFILE_DIR := $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 
 CMD_DOCKER := docker
-CMD_DOCKER_COMPOSE := docker-compose
+CMD_DOCKER_COMPOSE := docker compose
 
 MAIN_CONTAINER_APP := app
 MAIN_CONTAINER_SHELL := bash
@@ -17,6 +17,9 @@ ps: ## 監視
 
 up: ## 起動
 	$(CMD_DOCKER_COMPOSE) up --detach --remove-orphans
+
+migrate: ## 移行
+	$(CMD_DOCKER_COMPOSE) run python manage.py migrate
 
 setup: up ## 初回
 	echo "TODO: Not Implemented Yet!"
@@ -32,7 +35,7 @@ logs: ## 記録
 	$(CMD_DOCKER_COMPOSE) logs --timestamp
 
 follow: ## 追跡
-	$(CMD_DOCKER_COMPOSE) logs --timestamp --follow
+	$(CMD_DOCKER_COMPOSE) logs --timestamps --follow
 
 open: ## 閲覧
 	open ${PREVIEW_URL}
