@@ -20,7 +20,7 @@ env = environ.Env()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Environment Variables
-environ.Env.read_env(BASE_DIR / '.env')
+environ.Env.read_env(BASE_DIR / '.env', interpolate=True)
 
 DEBUG = env('DEBUG')
 
@@ -73,7 +73,17 @@ WSGI_APPLICATION = 'etude.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db()
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': env('DB_HOST'),
+        'PORT': env('DB_PORT'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'NAME': env('DB_NAME'),
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+        },
+    }
 }
 
 # Password validation

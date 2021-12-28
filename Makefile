@@ -6,7 +6,7 @@ MAKEFILE_DIR := $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 CMD_DOCKER := docker
 CMD_DOCKER_COMPOSE := docker compose
 
-MAIN_CONTAINER_APP := app
+MAIN_CONTAINER_APP := django
 MAIN_CONTAINER_SHELL := bash
 PREVIEW_URL := http://0.0.0.0:8000/
 

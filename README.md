@@ -18,7 +18,10 @@
 - [Prerequisites](#prerequisites)
 - [How to](#how-to)
   - [Setup](#setup)
+    - [Reveal Secrets](#reveal-secrets)
+    - [Migrate Database](#migrate-database)
   - [Develop](#develop)
+    - [Renew Containers](#renew-containers)
   - [Run](#run)
   - [Lint](#lint)
   - [Test](#test)
@@ -41,6 +44,7 @@
 $ make help
 ps                   監視
 up                   起動
+migrate              移行
 setup                初回
 restart              再起
 renew                転生
@@ -60,20 +64,30 @@ help                 助言
 
 ### Setup
 
+#### Reveal Secrets
+
 ```shell
-(T. B. D.)
+make reveal
+```
+
+#### Migrate Database
+
+```shell
+make migrate
 ```
 
 ### Develop
 
+#### Renew Containers
+
 ```shell
-(T. B. D.)
+make renew
 ```
 
 ### Run
 
 ```shell
-(T. B. D.)
+make up && make open && make follow
 ```
 
 ### Lint

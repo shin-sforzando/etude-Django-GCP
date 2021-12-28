@@ -1,10 +1,23 @@
 version: "3"
 
 services:
-  app:
+  gce-proxy:
+    image: gcr.io/cloudsql-docker/gce-proxy:1.19.1
+    environment:
+      TZ: Asia/Tokyo
+    volumes:
+      - ./cloud-sql-admin.json:/config/key.json
+    ports:
+      - "3306:3306"
+    command: >
+      /cloud_sql_proxy
+      -instances="etude-django-gcp:asia-northeast1:cloud-sql-mysql8"=tcp:0.0.0.0:3306
+      -credential_file=/config/key.json
+
+  django:
     build: .
-    command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
       - "8000:8000"
+    command: python3 manage.py runserver 0.0.0.0:8000
